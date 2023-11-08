@@ -37,8 +37,11 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "recipesapp.apps.RecipesappConfig"
+    "recipesapp.apps.RecipesappConfig",
+    "users.apps.UsersConfig",
+    "crispy_forms",
 ]
+CRISPY_TEMPLATE_PACK = 'uni_form'
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
