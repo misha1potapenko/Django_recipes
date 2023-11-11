@@ -32,7 +32,7 @@ def user_login(request):
 @login_required
 def dashboard(request):
     return render(request,
-                  'users/dashboard.html',
+                  'users/profile.html',
                   {'section': 'dashboard'})
 
 
