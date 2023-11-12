@@ -7,17 +7,17 @@
   <form method="POST">
     {% csrf_token %}
     <fieldset class="form-group">
-      <legend class="mb-4">Are you sure you want to delete?</legend>
+      <legend class="mb-4">Вы уверены, что хотите удалит?</legend>
       <h2>{{object}}</h2>
       {{ form|crispy }}
     </fieldset>
     <div class="form-group py-3">
-      <input class="btn btn-outline-danger" type="submit" value="Delete" />
+      <input class="btn btn-outline-danger" type="submit" value="Удалить" />
     </div>
   </form>
   <div class="border-top pt-3">
     <a class="text-muted" href="{% url 'recipes-home' %}"
-      >Cancel</a
+      >Назад</a
     >
   </div>
 </div>

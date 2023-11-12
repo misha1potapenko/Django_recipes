@@ -1,6 +1,8 @@
 
 
 # Create your views here.
+from urllib import request
+
 from django.http import HttpResponse
 
 from . import models
@@ -45,7 +47,7 @@ class RecipeDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
 class RecipeCreateView(LoginRequiredMixin, CreateView):
     model = models.Recipe
-    fields = ['title', 'description', "steps_cooking"]
+    fields = ['title', 'description', "steps_cooking", "time_for_cooking", "photo"]
 
     def form_valid(self, form):
         form.instance.author = self.request.user
@@ -54,7 +56,7 @@ class RecipeCreateView(LoginRequiredMixin, CreateView):
 
 class RecipeUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = models.Recipe
-    fields = ['title', 'description']
+    fields = ['title', 'description', "steps_cooking", "photo"]
 
     def test_func(self):
         recipe = self.get_object()

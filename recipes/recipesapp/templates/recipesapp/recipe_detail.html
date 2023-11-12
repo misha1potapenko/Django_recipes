@@ -19,8 +19,8 @@
 </div>
 {% if object.author == user or user.is_staff %}
 <div class="col-4">
-    <a class="btn btn-outline-info" href="{% url 'recipes-update' object.id %}">Update</a>
-    <a class="btn btn-outline-danger" href="{% url 'recipes-delete' object.id %}">Delete</a>
+    <a class="btn btn-outline-info" href="{% url 'recipes-update' object.id %}">Изменить</a>
+    <a class="btn btn-outline-danger" href="{% url 'recipes-delete' object.id %}">Удалить</a>
 </div>
 {% endif %}
 <!-- -->
